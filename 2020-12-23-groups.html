@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Groups - Tiago Caxias&#x27; ff00::</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Index</a></li><li class="chapter-item expanded "><a href="2020-12-23-principles.html"><strong aria-hidden="true">2.</strong> Principles of Product Engineering</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2020-12-23-preamble.html"><strong aria-hidden="true">2.1.</strong> Preamble</a></li><li class="chapter-item expanded "><a href="2020-12-23-value.html"><strong aria-hidden="true">2.2.</strong> Value</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="2020-12-23-groups.html" class="active"><strong aria-hidden="true">2.4.</strong> Groups</a></li><li class="chapter-item expanded "><a href="2020-12-23-delivery.html"><strong aria-hidden="true">2.5.</strong> Delivery</a></li><li class="chapter-item expanded "><a href="2020-12-23-context.html"><strong aria-hidden="true">2.6.</strong> Context</a></li><li class="chapter-item expanded "><a href="2020-12-23-value-eng.html"><strong aria-hidden="true">2.7.</strong> Value for Engineers</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment-eng.html"><strong aria-hidden="true">2.8.</strong> Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="tech_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Tiago Caxias&#x27; ff00::</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#groups" id="groups">Groups</a></h1>
+<p>Why do we need agile coaches, then?
+We wouldn't need them if we could keep focusing on something else outside our
+sphere of concern but since Dunbar said that sphere has bounded size we're
+getting <a href="https://en.wikipedia.org/wiki/Cognitive_bias#Types">cognitive biases</a>
+on most of our work.
+There is a limited amount of things we can constantly think about plus we
+favor our group over other people or groups.</p>
+<p>Going back in time we can see solutions to this problem, how to keep groups
+aligned, one such solution was <a href="https://en.wikipedia.org/wiki/Divide_and_rule">divide and 
+rule</a>.
+While devious in purpose, this technique used an outstanding way of solving
+the alignment problem, it moved the problem to smaller spheres, in manageable
+group sizes alignment is easier to maintain. Solving a problem is a goal clear
+enough and the ruler or any sphere had the autonomy to achieve the goal as they
+would believe it was best.</p>
+<p>With a large mediatic footprint, spotify did
+<a href="https://engineering.atspotify.com/2014/03/27/spotify-engineering-culture-part-1/">two</a>
+<a href="https://engineering.atspotify.com/2014/09/20/spotify-engineering-culture-part-2/">parts</a>
+on how they planned or achieved to address this.
+There's a lot of controversy on whether spotify actually does this and whether
+these models do work, that is not relevant, the bottom line is that
+in order to avhieve a major goal at scale, split that into smaller
+independent goals and give them to smaller independent groups.
+When the group size is manageable by all the sociology and group psychology
+limitations alive today the group will have no alignment issues.
+With a common goal we can even make use of group
+dynamics and make it perform and deliver much better than in any other format.</p>
+<p>The major caveat in the plan skethed above is that you cannot run a
+command-and-control structure.
+If you do, you'd be sharing expectations of things to happen instead of goals.
+The difference, if looking subtle, is a game changer.
+<a href="https://svpg.com/product-vs-feature-teams/">Product teams vs feature teams</a>
+is something I've seldom seen properly applied.
+I cannot stress enough how this must be done right and the vision of
+<em>product teams</em> must be implemented without shortcuts, alternatives result in
+major disalignment between company stakeholders and customers, caused by
+wrong product being created and possibly delivered.
+End results are waste of time and money; specifically, time to
+market lost and money wasted on doing the wrong thing.</p>
+<p>Apart from the intergroup issues outlined above there are ingroup problems
+found in several teams.
+Some were born from selective reading of the <a href="https://agilemanifesto.org/principles.html">principles
+inherent</a> to the agile manifesto.
+Sentences like <code>build projects around motivated individuals</code>, <code>continuous attention to technical excellence and good design enhances agility</code> and
+<code>the best architectures, requirements, and designs emerge from self-organizing teams</code> have tricked peoples minds.
+People naturally value their group more than outside people or groups
+and fall into a cognitive bias where they see their group as better
+than other groups.
+That leads to <a href="https://en.wikipedia.org/wiki/Pareidolia">reading known
+patterns</a> from unknown data,
+in quotes above from the agile manifesto principles <a href="https://en.wikipedia.org/wiki/Rorschach_test">it's possible to
+read</a> that <code>teams own architecture, they must be made of motivated individuals and they must keep focus to technical excelence and good design in order to achieve the agile panacea</code>.
+This ends in <a href="https://en.wikipedia.org/wiki/Analysis_paralysis">analysis 
+paralysis</a>,
+<a href="https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good">overengineering</a>
+and, lastly, moving in the direction not intended by the company itself.
+This rogue line of action is how good groups get defiled from within.</p>
+<p>Teams have a reduced vision of the world, that's the reason they're so
+productive, they have a specific scope.
+Apple, Gitlab and others has been known to battle overengineering
+and poor communication with techniques such as <a href="https://about.gitlab.com/handbook/people-group/directly-responsible-individuals/">placing a single
+person responsible for a certain
+topic</a> in order to guarantee <strong>delivery</strong>.
+This achieves two things:</p>
+<ul>
+<li>eliminates communication issues since a single person is responsible
+and accountable</li>
+<li>keeps focus on value delivered since there is no group decision</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="2020-12-23-alignment.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="2020-12-23-delivery.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="2020-12-23-alignment.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="2020-12-23-delivery.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
