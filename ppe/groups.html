@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Value for Engineers - Tiago Caxias&#x27; ff00::</title>
+        <title>Groups - Tiago Caxias&#x27; ::ff00</title>
         
         
 
@@ -18,28 +18,28 @@
         <meta name="theme-color" content="#ffffff" />
 
         
-        <link rel="icon" href="favicon.svg">
+        <link rel="icon" href="../favicon.svg">
         
         
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
         
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
         
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="../css/print.css" media="print">
         
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -49,7 +49,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
         </script>
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Index</a></li><li class="chapter-item expanded "><a href="2020-12-23-principles.html"><strong aria-hidden="true">2.</strong> Principles of Product Engineering</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2020-12-23-preamble.html"><strong aria-hidden="true">2.1.</strong> Preamble</a></li><li class="chapter-item expanded "><a href="2020-12-23-value.html"><strong aria-hidden="true">2.2.</strong> Value</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="2020-12-23-groups.html"><strong aria-hidden="true">2.4.</strong> Groups</a></li><li class="chapter-item expanded "><a href="2020-12-23-delivery.html"><strong aria-hidden="true">2.5.</strong> Delivery</a></li><li class="chapter-item expanded "><a href="2020-12-23-context.html"><strong aria-hidden="true">2.6.</strong> Context</a></li><li class="chapter-item expanded "><a href="2020-12-23-value-eng.html" class="active"><strong aria-hidden="true">2.7.</strong> Value for Engineers</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment-eng.html"><strong aria-hidden="true">2.8.</strong> Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="tech_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../landing_pad.html">Landing Pad</a></li><li class="chapter-item expanded "><a href="../ppe/principles_of_product_engineering.html">Principles of Product Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ppe/preamble.html">Preamble</a></li><li class="chapter-item "><a href="../ppe/value.html">Value</a></li><li class="chapter-item "><a href="../ppe/alignment.html">Alignment</a></li><li class="chapter-item expanded "><a href="../ppe/groups.html" class="active">Groups</a></li><li class="chapter-item "><a href="../ppe/delivery.html">Delivery</a></li><li class="chapter-item "><a href="../ppe/context.html">Context</a></li><li class="chapter-item "><a href="../ppe/value_for_engineers.html">Value for Engineers</a></li><li class="chapter-item "><a href="../ppe/alignment_for_engineers.html">Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../technology_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -127,11 +127,11 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Tiago Caxias&#x27; ff00::</h1>
+                    <h1 class="menu-title">Tiago Caxias&#x27; ::ff00</h1>
 
                     <div class="right-buttons">
                         
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         
@@ -163,39 +163,89 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#value-for-engineers" id="value-for-engineers">Value for Engineers</a></h1>
-<p>Most of us <a href="https://sre.google/sre-book/service-level-objectives/">have read</a>
-and praised and shared the notion of the SLI/SLO/SLA.
-We all know how to do metrics and monitoring but not everyone measures
-business metrics.
-This is the core of SLIs, find a measure the is the best indicator of the
-level your service is providing.
-That's <strong>value</strong>.
-The topic has been discussed some pages ago, this is the value that teams
-need to create and that the customer wants or needs.
-By measuring it, the team wil be able to run in continuous mode, since
-there's a gauge for the quality of delivery, as well as provide a concise line
-of information to leadership reporting how the team's work is doing.
-Plus, by having an SLI a team will never again be disconnected from the value
-that is needs to deliver, overengineering and analysis paralysis will begin
-to disapear.
-In fact it's not much different from TDD either, walk towards a tangible,
-well-defined, shared and understood goal.</p>
-<p>Engineers know exactly how to do this, there is no reason to believe
-that the notion of <em>delivering value</em> is hard to grasp.</p>
+                        <h2><a class="header" href="#groups" id="groups">Groups</a></h2>
+<p>Why do we need agile coaches, then? We wouldn't need them if we could keep
+focusing on something else outside our sphere of concern but since Dunbar
+said that sphere has a bounded size, we're getting <a href="https://en.wikipedia.org/wiki/Cognitive_bias#Types">cognitive
+biases</a> on most
+of our work.
+There is a limited amount of things we can constantly think about plus we
+favor our group over other people or groups.</p>
+<p>Going back in time we can see solutions to this problem, how to keep groups
+aligned, one such solution was <a href="https://en.wikipedia.org/wiki/Divide_and_rule">divide and
+rule</a>.
+While devious in purpose, this technique used an outstanding way of solving
+the alignment problem, it moved the problem to smaller spheres, in
+manageable group sizes alignment is easier to maintain.
+Solving a problem is a goal clear enough and the ruler or any sphere had
+the autonomy to achieve the goal as they would believe it was best.</p>
+<p>With a large mediatic footprint, spotify did 
+<a href="https://engineering.atspotify.com/2014/03/27/spotify-engineering-culture-part-1/">two</a>
+<a href="https://engineering.atspotify.com/2014/03/27/spotify-engineering-culture-part-1/">parts</a>
+on how they planned or achieved to address this.
+There's a lot of controversy on whether spotify actually does this and
+whether these models do work, that is not relevant, the bottom line is that
+in order to achieve a major goal at scale, split that into smaller
+independent goals and give them to smaller independent groups.
+When the group size is manageable by all the sociology and group psychology
+limitations alive today the group will have no alignment issues.
+With a common goal we can even make use of group dynamics and make it
+perform and deliver much better than in any other format.</p>
+<p>The major caveat in the plan skethed above is that you cannot run a command-and-control structure. If you do, you'd be sharing expectations of things to happen instead of goals. The difference, if looking subtle, is a game changer.
+<a href="https://svpg.com/product-vs-feature-teams/">Product teams vs feature
+teams</a> is something I've
+seldom seen properly applied.
+I cannot stress enough how this must be done right and the vision of
+product teams must be implemented without shortcuts, alternatives result
+in major disalignment between company stakeholders and customers,
+caused by wrong product being created and possibly delivered.
+End results are waste of time and money; specifically, time to market lost
+and money wasted on doing the wrong thing.</p>
+<p>Apart from the intergroup issues outlined above there are ingroup problems
+found in several teams.
+Some were born from selective reading of the <a href="https://agilemanifesto.org/principles.html">principles
+inherent</a> to the agile manifesto.
+Sentences like &quot;build projects around motivated individuals&quot;, &quot;continuous
+attention to technical excellence and good design enhances agility&quot; and &quot;the
+best architectures, requirements, and designs emerge from self-organizing
+teams&quot; have tricked peoples minds.
+People naturally value their group more than outside people or groups and
+fall into a cognitive bias where they see their group as better than other
+groups.
+That leads to <a href="https://en.wikipedia.org/wiki/Pareidolia">reading known 
+patterns</a> from unknown data,
+taking the quotes above, from the agile manifesto principles it's <a href="https://en.wikipedia.org/wiki/Rorschach_test">possible
+to misread</a> that
+&quot;teams own architecture, they must be made of motivated 
+individuals and they must keep focus to technical excelence and good design&quot;
+in order to achieve the agile panacea.
+This ends in <a href="https://en.wikipedia.org/wiki/Analysis_paralysis">analysis
+paralysis</a>,
+<a href="https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good">overengineering</a>
+and, lastly, moving in the direction not intended by the company itself.
+This rogue line of action is how good groups get defiled from within.</p>
+<p>Teams have a reduced vision of the world, that's the reason they're so
+productive, they have a specific scope. Apple, Gitlab and others has been
+known to battle overengineering and poor communication with techniques mainly
+<a href="https://about.gitlab.com/handbook/people-group/directly-responsible-individuals/">placing a single person 
+responsible</a>
+for a certain topic in order to guarantee delivery.
+In sum this eliminates communication issues, since a single person is
+responsible and accountable, and keeps focus on value delivered, since
+there is no group decision thus no quorum required to get a final answer.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="2020-12-23-context.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../ppe/alignment.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="2020-12-23-alignment-eng.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../ppe/delivery.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -207,13 +257,13 @@ that the notion of <em>delivering value</em> is hard to grasp.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="2020-12-23-context.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../ppe/alignment.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="2020-12-23-alignment-eng.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../ppe/delivery.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -251,14 +301,14 @@ that the notion of <em>delivering value</em> is hard to grasp.</p>
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Technology Alignment - Tiago Caxias&#x27; ff00::</title>
+        <title>Context - Tiago Caxias&#x27; ::ff00</title>
         
         
 
@@ -18,28 +18,28 @@
         <meta name="theme-color" content="#ffffff" />
 
         
-        <link rel="icon" href="favicon.svg">
+        <link rel="icon" href="../favicon.svg">
         
         
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
         
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
         
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="../css/print.css" media="print">
         
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -49,7 +49,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
         </script>
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Index</a></li><li class="chapter-item expanded "><a href="2020-12-23-principles.html"><strong aria-hidden="true">2.</strong> Principles of Product Engineering</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2020-12-23-preamble.html"><strong aria-hidden="true">2.1.</strong> Preamble</a></li><li class="chapter-item expanded "><a href="2020-12-23-value.html"><strong aria-hidden="true">2.2.</strong> Value</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="2020-12-23-groups.html"><strong aria-hidden="true">2.4.</strong> Groups</a></li><li class="chapter-item expanded "><a href="2020-12-23-delivery.html"><strong aria-hidden="true">2.5.</strong> Delivery</a></li><li class="chapter-item expanded "><a href="2020-12-23-context.html"><strong aria-hidden="true">2.6.</strong> Context</a></li><li class="chapter-item expanded "><a href="2020-12-23-value-eng.html"><strong aria-hidden="true">2.7.</strong> Value for Engineers</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment-eng.html"><strong aria-hidden="true">2.8.</strong> Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="tech_alignment.html" class="active">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../landing_pad.html">Landing Pad</a></li><li class="chapter-item expanded "><a href="../ppe/principles_of_product_engineering.html">Principles of Product Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ppe/preamble.html">Preamble</a></li><li class="chapter-item "><a href="../ppe/value.html">Value</a></li><li class="chapter-item "><a href="../ppe/alignment.html">Alignment</a></li><li class="chapter-item "><a href="../ppe/groups.html">Groups</a></li><li class="chapter-item "><a href="../ppe/delivery.html">Delivery</a></li><li class="chapter-item expanded "><a href="../ppe/context.html" class="active">Context</a></li><li class="chapter-item "><a href="../ppe/value_for_engineers.html">Value for Engineers</a></li><li class="chapter-item "><a href="../ppe/alignment_for_engineers.html">Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../technology_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -127,11 +127,11 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Tiago Caxias&#x27; ff00::</h1>
+                    <h1 class="menu-title">Tiago Caxias&#x27; ::ff00</h1>
 
                     <div class="right-buttons">
                         
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         
@@ -163,56 +163,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#technology-alignment" id="technology-alignment">Technology Alignment</a></h1>
-<p>Instead of a proper tech radar I wrote this to state my bias openly.</p>
-<p>Take <a href="https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)#Alignments">D&amp;D alignments</a>
-where the <em>lawful/chaotic</em> axis would evaluate the restrictions while developing
-and the <em>good/bad</em> axis would evaluate the amount of pain you get while
-operating that code.
-These are orthogonal, any language, framework, system design or technique
-will evaluate to specific value on both axes regarding the task at hand.</p>
-<p>Orthogonal to these two axes I'll add the <em>logic</em> axis, in D&amp;D would be whether
-someone is breaking role-play, which translates to cost-benefit or the <strong>I</strong>
-in <a href="https://en.wikipedia.org/wiki/Return_on_investment">ROI</a>, overengineering
-is measured here since we're talking about product engineering and not plain
-engineering.
-As corollary there are two sentences, the practical <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/ChaoticStupid">chaotic stupid is
-not an alignment</a>
-and the philosophical <a href="https://www.goodreads.com/quotes/348436-there-is-nothing-so-useless-as-doing-efficiently-that-which">there is nothing so useless as doing efficiently that
-which should not be done at
-all</a>.</p>
-<p>I am biased towards <em>lawful good</em>, I prefer the lawful and the good ends of the
-axes.
-Furthermore, I consider the <em>logic</em> axis to be prohibitive below a certain
-threshold. If something is lower than a reasonable value on the <em>logic</em> axis
-then a major issue is happening.</p>
-<p>The rationale here is, when you're being paid to build something and you imagine,
-dream of or make up requirements not originally there, then you're costing the
-company both time to market and money, the worst part is that these costs
-are hidden.
-Never, ever, do this. Ever.
-If you believe some requirements should be there
-then talk to your peers and double check that's true.
-Don't <a href="https://en.wikipedia.org/wiki/Disagree_and_commit">disagree and
-commit</a> on this, just
-raise awareness and, ultimately, leave.
-Everyone in a group must be moving to the same target. Always.
-Maturity turns out to have a large slice of <em>can you measure the <strong>I</strong> in ROI</em>,
-if it's not worth doing, don't do it, there is hardly anything as bad as
-failing on this analysis.</p>
+                        <h2><a class="header" href="#context" id="context">Context</a></h2>
+<p>In my self-reflection I had to bring up a lot of context which I tried to
+summarize over the last handful of pages.
+One of the key findings I did over these years is that software engineers
+are on the best spot to <a href="https://twitter.com/backslashx1b/status/1299604272489934849">understand these
+issues</a> with
+ease, I'll risk and say that it's in fact natural!</p>
+<p>Today, topics such as micro-services, distributed systems,
+scaling stateless systems, application orchestrators, metrics and alarms
+are quite common topics in producion environments.
+All of these map to at least one of the issues which we see daily in
+product engineering at scale.
+Scaling problems are the same and software engineers are used to solve them.
+There are known patterns, papers, blog posts, books, meetups and full-fledged
+talks about these topics, software engineers must make use of all of this
+tech material and start handling the scalability concerns in organizations
+as they do in system design.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="2020-12-23-alignment-eng.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../ppe/delivery.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="about.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../ppe/value_for_engineers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -224,13 +204,13 @@ failing on this analysis.</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="2020-12-23-alignment-eng.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../ppe/delivery.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="about.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../ppe/value_for_engineers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -268,14 +248,14 @@ failing on this analysis.</p>
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         

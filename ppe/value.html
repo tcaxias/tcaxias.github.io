@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Alignment for Engineers - Tiago Caxias&#x27; ff00::</title>
+        <title>Value - Tiago Caxias&#x27; ::ff00</title>
         
         
 
@@ -18,28 +18,28 @@
         <meta name="theme-color" content="#ffffff" />
 
         
-        <link rel="icon" href="favicon.svg">
+        <link rel="icon" href="../favicon.svg">
         
         
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
         
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
         
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="../css/print.css" media="print">
         
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -49,7 +49,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
         </script>
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Index</a></li><li class="chapter-item expanded "><a href="2020-12-23-principles.html"><strong aria-hidden="true">2.</strong> Principles of Product Engineering</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2020-12-23-preamble.html"><strong aria-hidden="true">2.1.</strong> Preamble</a></li><li class="chapter-item expanded "><a href="2020-12-23-value.html"><strong aria-hidden="true">2.2.</strong> Value</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment.html"><strong aria-hidden="true">2.3.</strong> Alignment</a></li><li class="chapter-item expanded "><a href="2020-12-23-groups.html"><strong aria-hidden="true">2.4.</strong> Groups</a></li><li class="chapter-item expanded "><a href="2020-12-23-delivery.html"><strong aria-hidden="true">2.5.</strong> Delivery</a></li><li class="chapter-item expanded "><a href="2020-12-23-context.html"><strong aria-hidden="true">2.6.</strong> Context</a></li><li class="chapter-item expanded "><a href="2020-12-23-value-eng.html"><strong aria-hidden="true">2.7.</strong> Value for Engineers</a></li><li class="chapter-item expanded "><a href="2020-12-23-alignment-eng.html" class="active"><strong aria-hidden="true">2.8.</strong> Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="tech_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../landing_pad.html">Landing Pad</a></li><li class="chapter-item expanded "><a href="../ppe/principles_of_product_engineering.html">Principles of Product Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../ppe/preamble.html">Preamble</a></li><li class="chapter-item expanded "><a href="../ppe/value.html" class="active">Value</a></li><li class="chapter-item "><a href="../ppe/alignment.html">Alignment</a></li><li class="chapter-item "><a href="../ppe/groups.html">Groups</a></li><li class="chapter-item "><a href="../ppe/delivery.html">Delivery</a></li><li class="chapter-item "><a href="../ppe/context.html">Context</a></li><li class="chapter-item "><a href="../ppe/value_for_engineers.html">Value for Engineers</a></li><li class="chapter-item "><a href="../ppe/alignment_for_engineers.html">Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../technology_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="../about.html">About</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -127,11 +127,11 @@
                         
                     </div>
 
-                    <h1 class="menu-title">Tiago Caxias&#x27; ff00::</h1>
+                    <h1 class="menu-title">Tiago Caxias&#x27; ::ff00</h1>
 
                     <div class="right-buttons">
                         
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         
@@ -163,45 +163,70 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#alignment-for-engineers" id="alignment-for-engineers">Alignment for Engineers</a></h1>
-<p>Alignment concerns doing communication in a way that all desired
-groups or people get to a common understanding or in plain terms,
-everyone's looking at the same picture.</p>
-<h1><a class="header" href="#sharing-state" id="sharing-state">Sharing State</a></h1>
-<p><code>previous alignment</code></p>
-<p><code>communication</code></p>
-<pre><code>always bring context - vector clocks
-
-always pass goal and not expected result
-akin to CRDT's
-</code></pre>
-<pre><code>CAP-Availability
-
-Let’s talk briefly about the need to give up either linearizability or availability in the case of a network partition.
-
-Let’s say you have replicas of your database in two different datacenters. The exact method of replication doesn’t matter for now – it may be single-leader (master/slave), multi-leader (master/master) or quorum-based replication (Dynamo-style). The requirement of replication is that whenever data is written in one datacenter, it also has to be written to the replica in the other datacenter. Assuming that clients only connect to one datacenter, there must be a network link between the two datacenters over which the replication happens.
-
-https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html
-</code></pre>
-<h1><a class="header" href="#domain-driven-design-and-micro-services" id="domain-driven-design-and-micro-services">Domain Driven Design and Micro-services</a></h1>
-<p><code>groups</code></p>
-<pre><code>size of micro-services
-cross-functional microservices
-</code></pre>
-<h1><a class="header" href="#common-ground" id="common-ground">Common Ground</a></h1>
+                        <h2><a class="header" href="#value" id="value">Value</a></h2>
+<p>In a past life I worked a year and a half in a very small company, one of
+those <em><a href="https://en.wikipedia.org/wiki/Lifestyle_business">lifestyle
+companies</a></em>, and due to
+its small size I got the opportunity of getting really close to processes
+such as hiring, sales, customer service and defining company strategy.
+These topics are of utmost importance to the majority of companies even
+though they frequently are far from the software engineer.</p>
+<p>This job was immensely useful since it made me understand very closely how
+to run a company, how does the money come in, what's customer churn,
+what's employee churn, what are prospects, what's upsell, what's the impact
+of a good and a bad hire and, foremost, what's communication.
+All of these things simply translate to value.</p>
+<p>Value is what an employee can offer an employer, it's also what the employer
+is supposed to give to the employee at the end of the month, value.
+Salary, bonuses, benefits and any other perks are things that an employee
+can get as part of their work, whether these translate to value depends on
+the employee.
+You may value something in your compensation package but one teammate
+might value something else, which is normal.</p>
+<p>You probably heard the sentence any decent answer to an interesting question
+begins, <a href="https://twitter.com/KentBeck/status/596007846887628801">&quot;it 
+depends...&quot;</a>.
+While this prerogative should not be abused, it surfaces the need to
+understand context when providing answers, it's not easy to align
+everyone's view in the same direction.
+Reason being, different entities, people or companies, value things
+differently.
+As a corolary one may say value depends on need and perception,
+how does one perceive value and which needs does one have.</p>
+<p>I honestly find this concept extremely easy to understand, my employer is
+supposed to give me value, things that I need and care about.
+This begs the question, what am I supposed to give back to my employer?
+The answer is pretty straightforward, employers want value; but not for
+them, they want the employee to produce value for their customers.
+This simplifies everything a lot, an employee should not worry about
+the employer, they should worry about delivering value to the customers,
+not the company customers, everyone's customers.</p>
+<p>I still get puzzled by the immense literature about this topic.
+First there the <a href="https://agilemanifesto.org/principles.html">agile manifesto</a>
+telling people to please their customers, then there's a multitude of <a href="https://www.bookdepository.com/search/?searchTerm=lean&amp;ageRangesTotal=9537&amp;category=1897">lean
+publications</a>
+which, along with
+<a href="https://www.bookdepository.com/search/?searchTerm=agile&amp;ageRangesTotal=17&amp;category=1897">agile</a>,
+got into the hype train.
+If you read the agile manifesto and lean principles it tells you to deliver
+value.
+There's an entire new religion with fancy keywords and certifications,
+popping up in résumées everywhere, to bring software engineers the word from
+the messiah, and the word is, &quot;deliver value&quot;.</p>
+<p>Apparently is hard to <strong>align</strong> everyone with this mindset.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="2020-12-23-value-eng.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../ppe/preamble.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="tech_alignment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../ppe/alignment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -213,13 +238,13 @@ cross-functional microservices
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="2020-12-23-value-eng.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../ppe/preamble.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="tech_alignment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../ppe/alignment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -257,14 +282,14 @@ cross-functional microservices
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
