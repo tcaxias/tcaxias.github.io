@@ -164,9 +164,42 @@
                 <div id="content" class="content">
                     <main>
                         <h2><a class="header" href="#alignment-for-engineers" id="alignment-for-engineers">Alignment for Engineers</a></h2>
-<p>Alignment concerns doing communication in a way that all desired groups or people get to a common understanding or in plain terms, everyone's looking at the same picture.</p>
+<p>Alignment concerns doing communication in a way that all desired groups
+or people get to a common understanding or in plain terms, get everyone
+to look at the same picture.</p>
+<p>In software engineering alignment is handled in multiple ways.
+As previously discussed, lack of alignment falls down frequently to
+inapropriate communication which frequently compromises lack of context.</p>
+<p>Context is, in the software engineering world, state.
+Stateless applications are the easier to deal with, no context must be kept
+between executions.
+Much like pure functions, only the variables passed to the function are
+required to calculate the result.</p>
+<p>To most software engineers that's a concept dealt on a daily basis.
+HTTP is stateless, there's no difference there.
+The name is kind of a fallacy, HTTP protocol requires no state on the server
+but the request has to carry entire state for the request.
+In order for some specific business logic to happen a rich request has
+to be performed containing complete <em>context</em> so that the server does
+what we expect of it.
+The trick of sending state in requests is not new, the way of giving full
+context when communicating should be used as much as stateless protocols
+are used and trusted.</p>
+<p>It's common to have assumptions when communicating, it should be also
+common to send those assumption with the communication itself.
+That's the principle of <a href="https://en.wikipedia.org/wiki/Vector_clock">vector
+clocks</a>.
+Holding and passing information is legitimate, stating the state, or
+<em>context</em>, the sender had when the information was written is crucial.
+It's the same for emails, when an email is read the date at which is
+was written is taken into account.
+It's ok to assume and communicate on top of those assumption, it's
+mandatory, however, so state those assumptions openly with the
+communication.
+I've seen this pattern benefiting most in cross-teams communication,
+where tribalism such as not-invented-here is more bound to happen.</p>
 <hr />
-<h1><a class="header" href="#wip" id="wip">WIP</a></h1>
+<p><em><strong>WIP</strong></em></p>
 <pre><code>Sharing State
 
 previous alignment
