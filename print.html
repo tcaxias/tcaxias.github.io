@@ -182,7 +182,9 @@ efficiency and correctness.</p>
 <hr />
 <p>To navigate use the links on the left or the arrow keys.
 To jump to the next page tap <code>right</code> on your keyboard.
-On the top of the page you can search this site and change the theme.</p>
+On the top of the page you can search this site and change the theme.
+Use the <code>print</code> icon on the top right corner to get a single-page view of
+everything.</p>
 <h1><a class="header" href="#principles-of-product-engineering" id="principles-of-product-engineering">Principles of Product Engineering</a></h1>
 <p><strong>2020-12-23</strong></p>
 <p>There is an evaluation cycle going on right now, at my present company,
@@ -320,7 +322,7 @@ previous learnings and context (types of groups).</p>
 effective and overcomes the hurdles posed by the intergroup dynamics.
 Communicating the best possible message, providing context, eliminating the
 possibility of cognitive biases.</p>
-<p>Alignment is algo a topic inside each group.</p>
+<p>Alignment is also a topic inside each group.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Group_dynamics#Intragroup_dynamics">Ingroup
 dynamics</a>
@@ -397,7 +399,7 @@ self-organizing teams&quot;</em> have tricked people's minds.
 People naturally value their group more than outside people or groups and
 fall into a cognitive bias where they see their group as better than other
 groups.</p>
-<p>Fast enough that leads to <a href="https://en.wikipedia.org/wiki/Pareidolia">reading known 
+<p>This tunnel vision stemming from ingroup psychology leads to <a href="https://en.wikipedia.org/wiki/Pareidolia">reading known 
 patterns</a> from unknown data.
 Taking the quotes above from the agile manifesto principles it's <a href="https://en.wikipedia.org/wiki/Rorschach_test">possible
 to misread</a> that
@@ -415,9 +417,11 @@ known to battle overengineering and poor communication with techniques mainly
 <a href="https://about.gitlab.com/handbook/people-group/directly-responsible-individuals/">placing a single person 
 responsible</a>
 for a certain topic in order to guarantee delivery.
-In sum this eliminates communication issues, since a single person is
-responsible and accountable, and keeps focus on value delivered, since
-there is no group decision thus no quorum required to get a final answer.</p>
+It's easier for a single person in the spotlight to get things going
+than for an <a href="http://www.columbia.edu/%7Esss31/rainbow/whose.job.html">entire group to be formally
+responsible</a>.
+In sum this eliminates communication issues and keeps focus on value delivered,
+since there is no group decision thus no quorum required to get a final answer.</p>
 <p>By delivering a clear and bite-sized goal to a team <strong>delivering</strong> value
 can be truly multiplied.</p>
 <h2><a class="header" href="#delivery" id="delivery">Delivery</a></h2>
@@ -502,7 +506,9 @@ and analysis paralysis should disperse.
 In fact it's not much different from TDD either, walk towards a
 well-defined, shared and understood goal.</p>
 <p>Engineers know exactly how to do this, there is no reason to believe that
-the notion of delivering value is hard to grasp.</p>
+the notion of delivering value is hard to grasp.
+By using SLIs, an organization is able to place, both at the leadership
+and at the team level, KPIs to properly measure value delivered.</p>
 <h2><a class="header" href="#state-causality-and-convergence" id="state-causality-and-convergence">State, Causality and Convergence</a></h2>
 <p>Alignment concerns doing communication in a way that all desired groups
 or people get to a common understanding or in plain terms, get everyone
@@ -516,10 +522,11 @@ Stateless applications are the easiest to deal with, no context must be kept
 between executions.
 Much like pure functions, only the variables passed to the function are
 required to calculate the result.</p>
-<p>To most software engineers that's a concept dealt on a daily basis.
-HTTP is stateless, there's no difference there.
-The name is kind of a fallacy, HTTP protocol requires no state on the server
-but the request has to carry the entire state for the request.
+<p>To most software engineers that's a concept dealt with on a daily basis.
+Every software engineer knows how HTTP is stateless.
+The word &quot;stateless&quot; here is a misnomer, the HTTP protocol requires
+no state on the server but the request has to carry the entire state
+for the request.
 In order for some specific business logic to happen a rich request has
 to be performed containing complete <em>context</em> so that the server does
 what we expect of it.
@@ -534,7 +541,7 @@ Holding and passing information is legitimate, stating the state, or
 <em>context</em>, the sender had when the information was written is crucial.
 This way causal context is always present and the receiver of the message
 has the possibility of resolving any conflict.
-It's ok to assume and communicate on top of those assumption, it's
+It's ok to assume and communicate on top of those assumptions, it's
 mandatory, however, so state those assumptions openly with the
 communication.
 Understanding the way to go must be decided to the listener.
@@ -570,24 +577,24 @@ themselves.</p>
 One of the things I've seen hurting companies is trying to fight
 <a href="https://en.wikipedia.org/wiki/Conway%27s_law">Conway's law</a>.
 It's only natural that systems mimic the organization producing and
-maintaining them, the groups who do the actual work</p>
-<p>Alignment is hard, always passing state is hard, dealing with
-causality is a time-killer, convergence is eventually consistent.
+maintaining them: aligning the groups who do the actual work is hard,
+always passing state is tiring, dealing with causality is a time-killer,
+convergence is eventually consistent.
 While we did find ways to communicate properly it should be kept to a logical
 minimum.
 Some companies found <a href="https://duckduckgo.com/?q=ideal+team+size+agile">the ideal team
 size</a> (pick any result)
 which means that the size of a group where communication has implicit state
 has an ideal range of values.</p>
-<p>Again, this is simple to understand for software engineers,
+<p>Again, this is simple to understand for software engineers:
 Micro-services and Domain Driven Design are the bread-and-butter
 of today's system design.
 Monoliths are considered evil but <a href="https://martinfowler.com/bliki/AnemicDomainModel.html">nano-services are
 atrocities</a>.
 Designing services too small leads to a disparity between
 business domain and services provided and creates an enormous burden
-on communication between services.</p>
-<p>Notable analogy, it's empirically known that picking up a team and giving
+on communication between services.
+Notable analogy, it's empirically known that picking up a team and giving
 a <a href="https://en.wikipedia.org/wiki/Micromanagement">task to each
 member</a> and hope
 it all connects in the end is bad for speed and causes major

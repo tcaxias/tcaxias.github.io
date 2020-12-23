@@ -176,10 +176,11 @@ Stateless applications are the easiest to deal with, no context must be kept
 between executions.
 Much like pure functions, only the variables passed to the function are
 required to calculate the result.</p>
-<p>To most software engineers that's a concept dealt on a daily basis.
-HTTP is stateless, there's no difference there.
-The name is kind of a fallacy, HTTP protocol requires no state on the server
-but the request has to carry the entire state for the request.
+<p>To most software engineers that's a concept dealt with on a daily basis.
+Every software engineer knows how HTTP is stateless.
+The word &quot;stateless&quot; here is a misnomer, the HTTP protocol requires
+no state on the server but the request has to carry the entire state
+for the request.
 In order for some specific business logic to happen a rich request has
 to be performed containing complete <em>context</em> so that the server does
 what we expect of it.
@@ -194,7 +195,7 @@ Holding and passing information is legitimate, stating the state, or
 <em>context</em>, the sender had when the information was written is crucial.
 This way causal context is always present and the receiver of the message
 has the possibility of resolving any conflict.
-It's ok to assume and communicate on top of those assumption, it's
+It's ok to assume and communicate on top of those assumptions, it's
 mandatory, however, so state those assumptions openly with the
 communication.
 Understanding the way to go must be decided to the listener.
