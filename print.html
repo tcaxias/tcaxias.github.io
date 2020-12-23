@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="landing_pad.html">Landing Pad</a></li><li class="chapter-item expanded "><a href="ppe/principles_of_product_engineering.html">Principles of Product Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="ppe/preamble.html">Preamble</a></li><li class="chapter-item "><a href="ppe/value.html">Value</a></li><li class="chapter-item "><a href="ppe/alignment.html">Alignment</a></li><li class="chapter-item "><a href="ppe/groups.html">Groups</a></li><li class="chapter-item "><a href="ppe/delivery.html">Delivery</a></li><li class="chapter-item "><a href="ppe/context.html">Context</a></li><li class="chapter-item "><a href="ppe/value_for_engineers.html">Value for Engineers</a></li><li class="chapter-item "><a href="ppe/alignment_for_engineers.html">Alignment for Engineers</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="technology_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="landing_pad.html">Landing Pad</a></li><li class="chapter-item expanded "><a href="ppe/principles_of_product_engineering.html">Principles of Product Engineering</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="ppe/preamble.html">Preamble</a></li><li class="chapter-item "><a href="ppe/value.html">Value</a></li><li class="chapter-item "><a href="ppe/alignment.html">Alignment</a></li><li class="chapter-item "><a href="ppe/groups.html">Groups</a></li><li class="chapter-item "><a href="ppe/delivery.html">Delivery</a></li><li class="chapter-item "><a href="ppe/context.html">Context</a></li><li class="chapter-item "><a href="ppe/value_for_engineers.html">SLIs and SLOs</a></li><li class="chapter-item "><a href="ppe/alignment_for_engineers.html">State, Causality and Convergence</a></li><li class="chapter-item "><a href="ppe/groups_for_engineers.html">Domain Driven Design</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="technology_alignment.html">Technology Alignment</a></li><li class="chapter-item expanded affix "><a href="about.html">About</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -468,7 +468,7 @@ There are known patterns, papers, blog posts, books, meetups and full-fledged
 talks and conferences about these topics, software engineers must make
 use of all of this tech material and start handling the scalability
 concerns in organizations as they do in system design.</p>
-<h2><a class="header" href="#value-for-engineers" id="value-for-engineers">Value for Engineers</a></h2>
+<h2><a class="header" href="#slis-and-slos" id="slis-and-slos">SLIs and SLOs</a></h2>
 <p>Some of us <a href="https://sre.google/sre-book/service-level-objectives/">have read</a>,
 praised and shared the notions of the SLI and SLO.
 Software engineers know how to do metrics and monitoring but not
@@ -490,13 +490,14 @@ In fact it's not much different from TDD either, walk towards a
 well-defined, shared and understood goal.</p>
 <p>Engineers know exactly how to do this, there is no reason to believe that
 the notion of delivering value is hard to grasp.</p>
-<h2><a class="header" href="#alignment-for-engineers" id="alignment-for-engineers">Alignment for Engineers</a></h2>
+<h2><a class="header" href="#state-causality-and-convergence" id="state-causality-and-convergence">State, Causality and Convergence</a></h2>
 <p>Alignment concerns doing communication in a way that all desired groups
 or people get to a common understanding or in plain terms, get everyone
-to look at the same picture.</p>
-<p>In software engineering alignment is handled in multiple ways.
+to look at the same picture.
+In software engineering alignment is handled in multiple ways.
 As previously discussed, lack of alignment falls down frequently to
-inapropriate communication which frequently compromises lack of context.</p>
+inapropriate communication which frequently compromises lack of context.
+Let's approach this using <em>state</em>, <em>causality</em> and <em>convergence</em>.</p>
 <p>Context is, in the software engineering world, state.
 Stateless applications are the easier to deal with, no context must be kept
 between executions.
@@ -514,47 +515,53 @@ context when communicating should be used as much as stateless protocols
 are used and trusted.</p>
 <p>It's common to have assumptions when communicating, it should be also
 common to send those assumption with the communication itself.
-That's the principle of <a href="https://en.wikipedia.org/wiki/Vector_clock">vector
-clocks</a>.
+That's the principle of <a href="https://en.wikipedia.org/wiki/Version_vector">version
+vectors</a>.
 Holding and passing information is legitimate, stating the state, or
 <em>context</em>, the sender had when the information was written is crucial.
-It's the same for emails, when an email is read the date at which is
-was written is taken into account.
+This way causal context is always present and the receiver of the message
+has the possibility of resolving any conflict.
 It's ok to assume and communicate on top of those assumption, it's
 mandatory, however, so state those assumptions openly with the
 communication.
+Understanding the way to go must be decided to the listener.
 I've seen this pattern benefiting most in cross-teams communication,
 where tribalism such as not-invented-here is more bound to happen.</p>
+<p>Passing an order is different from passing intent.
+Software engineers know the difference between <a href="https://martinfowler.com/eaaDev/EventNarrative.html#EventsAndCommands">events and
+commands</a>.
+Reporting something is decoupled from the actions of systems consumig the
+message.
+Analogously, a goal communicated in a product-team organization must have
+similar effect.
+Leadership will guarantee that the message holds full context on the goal
+to achieve, but the reaction from the team itself should be decided
+autonomously by the team, regarding current state, <em>context</em>, and SLI, <em>value</em>.</p>
+<p>This is not new, CRDTs  work this way.
+(I'm talking about CvRDTs only in here.)
+Assume all state held by people is a CRDT.
+When leadership replicates something to teams it will evetually converge.
+However the <a href="https://lars.hupel.info/topics/crdt/04-combinators/#grow-only-counters-revisited">convergence
+moment</a>
+and the final result are unknown to the sender because they depende on the
+CRDT representing the team and other replication flows.</p>
+<p>Teams have more than one incentive which causes them to change state,
+priorities, context, pick your term.
+<a href="https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html">Since the network is
+unreliable</a>,
+priotize communication and define well what's the decision method.
+They must have the autonomy to apply causality and convergence rules by
+themselves.</p>
+<h2><a class="header" href="#domain-driven-design" id="domain-driven-design">Domain Driven Design</a></h2>
 <hr />
-<p><em><strong>WIP</strong></em></p>
-<pre><code>Sharing State
-
-previous alignment
-
-communication
-
-always bring context - vector clocks
-
-always pass goal and not expected result
-akin to CRDT's
-
-CAP-Availability
-
-Let’s talk briefly about the need to give up either linearizability or availability in the case of a network partition.
-
-Let’s say you have replicas of your database in two different datacenters. The exact method of replication doesn’t matter for now – it may be single-leader (master/slave), multi-leader (master/master) or quorum-based replication (Dynamo-style). The requirement of replication is that whenever data is written in one datacenter, it also has to be written to the replica in the other datacenter. Assuming that clients only connect to one datacenter, there must be a network link between the two datacenters over which the replication happens.
-
-https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html
-
-Domain Driven Design and Micro-services
-
-groups
-
-size of micro-services
-cross-functional microservices
-
-Common Ground
-</code></pre>
+<h4><a class="header" href="#wip" id="wip">WIP</a></h4>
+<p>https://martinfowler.com/bliki/AnemicDomainModel.html</p>
+<p>Domain Driven Design and Micro-services</p>
+<p>groups</p>
+<p>size of micro-services
+cross-functional microservices</p>
+<p>Common Ground</p>
+<pre><code></code></pre>
 <h1><a class="header" href="#technology-alignment" id="technology-alignment">Technology Alignment</a></h1>
 <p>Instead of a proper tech radar I wrote this to state my bias openly.</p>
 <p>Take <a href="https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)#Alignments">D&amp;D alignments</a>
