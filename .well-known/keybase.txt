@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/tcx
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tcaxias.github.io
+  * I am tcx (https://keybase.io/tcx) on keybase.
+  * I have a public key ASDeHEwSUMvar0FjVmqmXD0p_O2cXl8BDQDPFAkyIsB6qAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012033d0d83d9b974f806e64b88470e8ad2f8f377804989da091823c4cf18df78e420a",
+      "host": "keybase.io",
+      "kid": "0120de1c4c1250cbdaaf4163566aa65c3d29fced9c5e5f010d00cf14093222c07aa80a",
+      "uid": "e70df34b38e117221e59d3792cac7d19",
+      "username": "tcx"
+    },
+    "merkle_root": {
+      "ctime": 1613994632,
+      "hash": "2453975c49f233474fc131690cf74ace02d63787ed6a3eab1a8c61f555fec22d74f066a82836879c72d63df34342e4e0c144bbdbf2e71c16d19056d9cb2e9c1f",
+      "hash_meta": "df7b4018967f333e4db965e7d3157e6e196856014c45144f4c9001ce729e9a2e",
+      "seqno": 19187742
+    },
+    "service": {
+      "entropy": "HRY3tRcGPe5pIHuUAUSu/CDs",
+      "hostname": "tcaxias.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.1"
+  },
+  "ctime": 1613994686,
+  "expire_in": 504576000,
+  "prev": "47f9a0052fd7392b3355fdfc7a2efdf85c96128fcb0324d8f488978713ce1c34",
+  "seqno": 225,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg3hxMElDL2q9BY1Zqplw9KfztnF5fAQ0AzxQJMiLAeqgKp3BheWxvYWTES5cCzOHEIEf5oAUv1zkrM1X9/Hou/fhclhKPywMk2PSIl4cTzhw0xCB7K6gWhQE1DeM6xm6si9c9M5TmH/+Z7t9RNauoO5exYQIBwqNzaWfEQK6WuZB+qnhqJRH6uh4GEI0oSHv7t+e8u2inaOoGBXt77pwr3k4KC8B8aU4JdpT8s+zlhhp+Y5XsivpA4yLr6guoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCuuzca0VLTxjx1ZGUDfcda4COFP5N0UH1LwsoRFwdRM6N0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tcx
+
+==================================================================
