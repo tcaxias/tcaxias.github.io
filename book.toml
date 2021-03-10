@@ -15,6 +15,7 @@ limit-results = 20
 default-theme = 'rust'
 preferred-dark-theme = 'ayu'
 no-section-label = true
+site-url = 'static/index.html'
 
 [output.html.fold]
 enable = true
