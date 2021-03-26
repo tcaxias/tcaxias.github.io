@@ -203,7 +203,7 @@ the autonomy to achieve the goal as they would believe it was best.
 
 With a large mediatic footprint, spotify did 
 [two](https://engineering.atspotify.com/2014/03/27/spotify-engineering-culture-part-1/)
-[parts](https://engineering.atspotify.com/2014/03/27/spotify-engineering-culture-part-1/)
+[parts](https://engineering.atspotify.com/2014/09/20/spotify-engineering-culture-part-2/)
 on how they planned or achieved to address this.
 There's a lot of controversy on whether spotify actually does this and
 whether these models do work, that is not relevant, the bottom line is that
